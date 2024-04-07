@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Gugi&family=Lato:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 5px;
+  }
+  body::-webkit-scrollbar-track{
+    background-color:black;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color:pink;
+    border-radius: 3px;
+  }
+:root{ 
+    --container: calc(1vw + 1vh); 
+} 
+body{
+    background:#000000;
+    overflow-x: hidden;
+} 
+.header{
+    width:100%;
+    position: fixed;
+    z-index: 999;
+ }
+ .header__container{  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding-top: 46px;  
+}  
+.header__menu{  
+    display: flex;  
+    column-gap: 20px;  
+    padding-top: 20px;
+}  
+.header__menu > li > a{  
+    font-weight: 900;  
+    font-size: 13px;  
+    line-height: 27px;  
+    color: #FFFFFF;  
+}  
+.header__burgermenu{  
+    width: 25px;  
+    display: none;  
+    position: relative; 
+    right: 0; 
+}  
+@media(max-width:768px){  
+    .header__menu{  
+        font-size: 30px;
+        padding-top: 120px;
+        width: 150px; 
+        height: 300px; 
+        background:transparent; 
+        display: flex;  
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        position: fixed; 
+        right: 0; 
+        transition: 1s; 
+        transform: translateX(100%);     
+    }  
+    .header__menu.active{ 
+        transform: translateX(0); 
+    } 
+    .header__burgermenu{  
+        display: block; 
+    }
+}
+.header__logo__title{
+    color:#ec7ca5;
+    /* font-size: 27px;  */
+    font-size: calc(var(--container)*1.8);
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* первый section */
+.page__account{
+    width: 100%;
+    padding-top: 70px;
+}
+.account__image{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.account__image__photo{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.account__image__title{
+    color: white;
+    /* font-size: 30px; */
+    font-size: calc(var(--container)*2);
+}
+.account__menu{
+    display: flex;
+    column-gap: 40px;
+    position: relative;
+    padding-top: 20px;
+}
+.account__menu >li> a{
+    /* font-size: 20px; */
+    font-size: calc(var(--container)*1);
+    color: #ffff;
+}
+.account__menu >li> a:hover{
+    color: #ECC1D1;
+}
+.account__menu::after{
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 1px;
+    background:rgb(66, 65, 65);
+    top: 70px;
+}
+@media (max-width:432px) {
+    .account__menu::after{
+        width: 780px;
+    }
+    .artits__card__page__photo{
+        width: 200px;
+    }
+}
+@media (max-width:375px) {
+    .account__menu::after{
+        width: 260px;
+    }
+    .account__image__photo{
+        width: 130px;
+        height: 130px;
+    }
+    .artits__card__page__photo{
+        width: 90px;
+    }
+}
+@media (max-width:320px) {
+    .artists__card {
+        flex-wrap: wrap;
+    }
+}
+.page__music{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap: 30px;
+    padding-top: 100px;
+}
+.page__music__title{
+    /* font-size: 20px; */
+    font-size: (var(--container)*5);
+    color: #ffff;
+}
+.page__music__btn{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    color:#ffff;
+    background: #ECC1D1;
+    transition: 1s;
+}
+.page__music__btn:hover{
+    transform: scale(0.9);
+}
+.card__podcasts{
+    padding-top:30px;
+}
+.subtitle{
+    color: #ffff;
+}
+.artists__card__page__photo{
+    border-radius: 50%;
+}
+.artists__card{
+    display: flex;
+    column-gap: 40px;
+    padding-top: 30px;
+}
+.artits__card__page__photo{
+    border-radius: 50%;
+}
+.card__artists__page__subtitle{
+    color: #fff;
+    text-align: center;
+    /* font-size: 20px; */
+    font-size: calc(var(--container)*1);
+}
+.card{
+    background: url(../icons/image\ 45.png);
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width:252px) {
+    .artists__card{
+        flex-wrap: wrap;
+    }
+}

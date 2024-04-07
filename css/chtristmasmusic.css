@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Gugi&family=Lato:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+}
+body::-webkit-scrollbar{
+  width: 5px;
+}
+body::-webkit-scrollbar-track{
+  background-color:black;
+}
+body::-webkit-scrollbar-thumb{
+  background-color:pink;
+  border-radius: 3px;
+}
+:root{ 
+    --container: calc(1vw + 1vh); 
+} 
+body{
+    background:#000000;
+    overflow-x: hidden;
+} 
+.header{
+    width:100%;
+    position: fixed;
+    z-index: 999;
+}
+.header__container{  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding-top: 46px;  
+}  
+.header__menu{  
+    display: flex;  
+    column-gap: 20px;
+    padding-top: 20px;  
+}  
+.header__menu > li > a{  
+    font-weight: 900;  
+    font-size: 13px;  
+    line-height: 27px;  
+    color: #FFFFFF;  
+}  
+.header__burgermenu{  
+    width: 25px;  
+    display: none;  
+    position: relative; 
+    right: 0; 
+}  
+  .title{
+    color:#ec7ca5;
+    /* font-size: 27px; */
+    font-size: calc(var(--container)*1.9);
+  }
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+.pop__music__page{
+    width: 100%;
+    height: 300px;
+    background: url(https://e-cdns-assets.dzcdn.net/landing/cdnimage/1920/75/https%3A%2F%2Fe-cdns-assets.dzcdn.net%2Flanding%2F_next%2Fstatic%2Fmedia%2Fchristmas-hero.da09ccf8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.pop__music__page__container{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+} 
+.pop__music__page__image__title{
+    color:#ffff;
+    /* font-size: 70px; */
+    font-size: calc(var(--container)*2.5);
+    letter-spacing: 5px;
+}
+.summer__page{
+    width: 100%;
+}
+.summer__page__text{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+.summer__page__text__title{
+    color: #ffff;
+    /* font-size: 60px; */
+    font-size: calc(var(--container)*3);
+    letter-spacing: 3px;
+}
+.summer__page__text__subtitle{
+    color: #ffff;
+    font-size: 15px;
+    font-size: calc(var(--container)*1);
+    letter-spacing: 3px;
+}
+.summer__page__image {
+    display: flex;
+    padding-top: 20px;
+    transition: 1s;
+}
+.summer__page__image img:hover{
+    transform: scale(0.9);
+}
+.footer{
+  width: 100%;
+  margin-top: 80px;
+  background: #1d1c1c;
+}
+.footer__container{
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+  position: relative;
+}
+.footer__menu{
+  display: flex;
+  justify-content: center;
+  /* column-gap: 30px; */
+  column-gap: calc(var(--container)*1);
+  padding-top: 40px;
+  position: relative;
+}
+.footer__menu>li>a{
+  font-size:calc(var(--container)*0.9);
+  /* font-size: 18px; */
+  color: rgb(146, 143, 143);
+}
+.logo__title{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+h5{
+  color:rgb(146, 143, 143);
+  /* font-size: 20px; */
+  font-size: calc(var(--container)*1);
+}
+.logo{
+  padding-top: 30px;
+}
+  @media(max-width:768px){  
+    .header__menu{  
+        font-size: 30px;
+        padding-top: 120px;
+        width: 150px; 
+        height: 300px; 
+        background:transparent; 
+        display: flex;  
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        position: fixed; 
+        right: 0; 
+        transition: 1s; 
+        transform: translateX(100%);     
+    }  
+    .header__menu.active{ 
+        transform: translateX(0); 
+    } 
+    .header__burgermenu{  
+        display: block; 
+      }  
+  }
+  @media (max-width:800px) {
+    .summer__page__image {
+      flex-wrap: wrap;
+    }
+  }
+@media (max-width:320px) {
+    .music__page__block__image img{
+        width: 300px;
+        height: 290px;
+    }
+}
+@media (max-width:768px) {
+    .footer__container::after{
+      width: 800px;
+    }
+  }
+  @media (max-width:425px) {
+    .footer__container::after{
+      width: 400px;
+    }
+    .footer__menu::after{
+      width: 300px;
+    }
+    .summer__page__image{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width:320px) {
+    .footer__container::after{
+      width: 250px;
+    }
+    .footer__menu::after{
+      width: 150px;
+      
+    }
+    .footer__menu{
+      padding-top: 10px;
+    }
+  }

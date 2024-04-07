@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Gugi&family=Lato:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+}
+body::-webkit-scrollbar{
+  width: 5px;
+}
+body::-webkit-scrollbar-track{
+  background-color:black;
+}
+body::-webkit-scrollbar-thumb{
+  background-color:pink;
+  border-radius: 3px;
+}
+:root{ 
+    --container: calc(1vw + 1vh); 
+} 
+body{
+    background:#000000;
+    overflow-x: hidden;
+} 
+.header{
+    width:100%;
+    position: fixed;
+    z-index: 999;
+}
+.header__container{  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding-top: 46px;  
+}  
+.header__menu{  
+    display: flex;  
+    column-gap: 20px; 
+    padding-top: 20px; 
+}  
+.header__menu > li > a{  
+    font-weight: 900;  
+    font-size: 13px;  
+    line-height: 27px;  
+    color: #FFFFFF;
+    transition: 1s;  
+}
+.header__burgermenu{  
+    width: 25px;  
+    display: none;  
+    position: relative; 
+    right: 0; 
+}  
+@media(max-width:768px){  
+  .header__menu{  
+      font-size: 30px;
+      padding-top: 120px;
+      width: 150px; 
+      height: 300px; 
+      background:transparent; 
+      display: flex;  
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      position: fixed; 
+      right: 0; 
+      transition: 1s; 
+      transform: translateX(100%);     
+  }  
+  .header__menu.active{ 
+      transform: translateX(0); 
+  } 
+  .header__burgermenu{  
+      display: block; 
+    }  
+}
+.title{
+    color:#ec7ca5;
+    /* font-size: 27px; */
+    font-size: calc(var(--container)*1.9);
+  }
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+.pop__music__page{
+    width: 100%;
+    height: 300px;
+}
+.pop__music__page__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+
+}
+.pop__music__page__text{
+    color: pink;
+    /* font-size: 30px; */
+    font-size: calc(var(--container)*1.5);
+    max-width: 165px;
+    letter-spacing: 5px;
+}
+.pop__music__page__image img{
+    border-radius: 50%;
+}
+.pop__music__icons img{
+    transition: 1s;
+}
+.pop__music__icons img:hover{
+    transform: scale(0.8);
+    border-radius: 50%;
+    background: #302d2d;
+}
+.music{
+    width: 100%;
+}
+.music__container{
+    display: flex;
+    column-gap: 90px;
+    padding-top: 70px;
+}
+.pop__music{
+  display: flex;
+  column-gap:600px;
+}
+.pop__music__songs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.pop__music__songs__title{
+    color: #ffff;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+audio{
+    height: 30px;
+}
+audio::-webkit-media-controls-enclosure { 
+    background: pink; 
+  } 
+.pop__music__icons{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.footer{
+  width: 100%;
+  margin-top: 80px;
+  background: #1d1c1c;
+}
+.footer__container{
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+  position: relative;
+}
+.footer__menu{
+  display: flex;
+  justify-content: center;
+  /* column-gap: 30px; */
+  column-gap: calc(var(--container)*1);
+  padding-top: 40px;
+  position: relative;
+}
+.footer__menu>li>a{
+  font-size:calc(var(--container)*0.9);
+  /* font-size: 18px; */
+  color: rgb(146, 143, 143);
+}
+.logo__title{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+h5{
+  color:rgb(146, 143, 143);
+  /* font-size: 20px; */
+  font-size: calc(var(--container)*1);
+}
+.logo{
+  padding-top: 30px;
+}
+  @media (max-width:1303px) {
+  .albums__page__music__text{
+     column-gap: 400px;
+  }
+}
+@media (max-width:1080px) {
+  .pop__music{
+    column-gap: 200px;
+  }
+}
+@media (max-width:863px) {
+  .pop__music{
+     column-gap: 90px;
+  }
+}
+@media (max-width:425px) {
+  .pop__music{
+    column-gap: 8px;
+  }
+}
+
+.albums__page__music__icons__menu{
+    display: none;
+    height: 25px;
+}
+@media (max-width:752px){
+    .pop__music__icons{
+        display: none;
+    }
+    .albums__page__music__icons__menu{
+        display: block;
+    }
+}
+@media (max-width:425px) {
+  audio{
+      width: 160px;
+      height: 20px;
+  }   
+  .music__container{
+      column-gap: 40px;
+  }
+  .pop__music__songs{
+      column-gap: 5px;
+  }
+  .albums__page__image img{
+      width: 180px;
+  }
+  .pop__music__page__image img{
+    width: 200px;
+
+  }
+}
